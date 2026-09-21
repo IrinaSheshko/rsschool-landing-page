@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee House — Artisan Coffee & Cozy Atmosphere</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">☕ COFFEE HOUSE</a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#favorites">Coffee</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#visitus">Favorites</a></li>
+                    <li><a href="#contacts">Contacts</a></li>
+                </ul>
+            </nav>
+            <div class="header-controls">
+                <button id="theme-btn" aria-label="Toggle theme">🌙</button>
+                <a href="catalog.html" class="burger-btn" aria-label="Open menu">☰Menu</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- 1. Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>Enjoy Premium Coffee & Pastries</h1>
+                <p>Experience the finest artisan coffee roasted to perfection, paired with fresh homemade bakery items in a cozy atmosphere.</p>
+                <a href="catalog.html" class="btn">Explore Catalog</a>
+            </div>
+        </section>
+
+        <!-- 2. Slider Section -->
+        <section id="favorites" class="slider-section">
+            <div class="container">
+                <h2>Choose Your Favorite Drink</h2>
+                <div class="slider-container">
+                    <button class="slider-btn" aria-label="Previous slide">‹</button>
+                    <div class="slider-track">
+                        <div class="slide">
+                            <div class="slide-img">
+                                <img src="./img/coffee-1.jpg" alt="Caramel Macchiato">
+                            </div>
+                            <h3>Caramel Macchiato</h3>
+                            <p>Sweet vanilla & espresso</p>
+                        </div>
+                        <div class="slide">
+                            <div class="slide-img">
+                                <img src="./img/coffee-2.jpg" alt="Classic Cappuccino">
+                            </div>
+                            <h3>Classic Cappuccino</h3>
+                            <p>Rich foam & bold flavor</p>
+                        </div>
+                        <div class="slide">
+                            <div class="slide-img">
+                                <img src="./img/coffee-3.jpg" alt="Iced Cold Brew">
+                            </div>
+                            <h3>Iced Cold Brew</h3>
+                            <p>Refreshing smooth coffee</p>
+                        </div>
+                    </div>
+                    <button class="slider-btn" aria-label="Next slide">›</button>
+                </div>
+            </div>
+        </section>
+
+       <!-- 3. About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2>About Our Coffee House</h2>
+                <p>Coffee House is a place where tradition meets modern artisan craft. We source the top 1% of Arabica beans from around the world, roasting them in-house daily to ensure every cup delivers an exceptional experience. Whether you need a quick morning boost or a quiet corner to read, our doors are always open for you.</p>
+                
+                <!-- Four foto -->
+                <div class="about-grid">
+                    <div class="about-img about-img--1">
+                        <img src="./img/about/about-1.jpg" alt="Coffee preparation">
+                    </div>
+                    <div class="about-img about-img--2">
+                        <img src="./img/about/about-2.jpg" alt="Cozy interior">
+                    </div>
+                    <div class="about-img about-img--3">
+                        <img src="./img/about/about-3.jpg" alt="Fresh pastries">
+                    </div>
+                    <div class="about-img about-img--4">
+                        <img src="./img/about/about-4.jpg" alt="Barista at work">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Features Section -->
+        <section class="features">
+            <div class="container" id="visitus">
+                <h2>Why Visit Us</h2>
+                <div class="features-grid">
+                    <article class="feature-card">
+                        <h3>100% Organic Beans</h3>
+                        <p>Ethically sourced sustainable coffee beans from trusted farmers.</p>
+                    </article>
+                    <article class="feature-card">
+                        <h3>Fresh Bakery Daily</h3>
+                        <p>Croissants, cakes, and pastries baked fresh every single morning.</p>
+                    </article>
+                    <article class="feature-card">
+                        <h3>Cozy Atmosphere</h3>
+                        <p>Comfortable seating, free high-speed Wi-Fi, and relaxing music.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contacts" class="footer">
+        <div class="container">
+            <p>Contacts: <a href="tel:+79991234567">+7 (999) 123-45-67</a> | 
+            <a href="https://maps.google.com/?q=789+Bean+Street+Seattle+WA" target="_blank" rel="noopener noreferrer">
+            789 Bean Street, Seattle, WA</a></p>
+            <p><a href="https://github.com" target="_blank">GitHub Repository</a> | <a href="https://rs.school/courses/javascript" target="_blank">RS School Course</a></p>
+            <p>&copy; 2026 Coffee House. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
