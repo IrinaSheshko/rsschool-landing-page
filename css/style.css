@@ -49,22 +49,86 @@ img {
     display: block;
 }
 
-/* Контейнеры для картинок в вашем слайдере / карточках */
-.slide-img {
-    width: 100%;
-    height: 300px; 
-    overflow: hidden;
-    border-radius: 10px; 
+/* Slider Styles */
+
+* {box-sizing:border-box}
+
+
+.slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    max-width: 500px;
+    margin: 0 auto;
 }
 
-/* Сама картинка внутри контейнера */
-.slide-img img {
+.slider-wrapper{
     width: 100%;
-    height: 100%;
+    
+}
+
+.slide {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.slide.active {
+    display: flex;
+    
+}
+.slide-img{
+    width: 100%;
+    max-width: 480px;
+    height: 480px;
     object-fit: cover;
-    border-radius: 16px;
-    overflow: hidden; 
-} 
+    border-radius: 40px;
+    margin-bottom: 20px;
+}
+
+.slider-btn {
+    background: transparent;
+    border: 1px solid #403F3D;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: background-color 0.3s ease;
+}
+
+.slider-btn:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.slider-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.slider-pagination {
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 40px;
+    height: 4px;
+    background-color: #C1B6AD;
+    border-radius: 2px;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #403F3D;
+}
 
 .slide-img img,
 .card img {
@@ -80,6 +144,21 @@ img {
 .cat-btn {
     border-radius: 30px; 
 }
+
+.slide.active {
+    display: flex;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/* Slider end */
 
 .load-more-btn {
   display: block;
@@ -508,8 +587,6 @@ body.dark-theme .header {
         grid-template-columns: 1fr; 
     }
 }
-
-
 
 @media (max-width: 768px) {
     

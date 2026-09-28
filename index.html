@@ -47,38 +47,43 @@
         </section>
 
         <!-- 2. Slider Section -->
-        <section id="favorites" class="slider-section">
-            <div class="container">
-                <h2>Choose Your Favorite Drink</h2>
-                <div class="slider-container">
-                    <button class="slider-btn" aria-label="Previous slide">‹</button>
-                    <div class="slider-track">
-                        <div class="slide">
-                            <div class="slide-img">
-                                <img src="./img/coffee-1.jpg" alt="Caramel Macchiato">
-                            </div>
-                            <h3>Caramel Macchiato</h3>
-                            <p>Sweet vanilla & espresso</p>
-                        </div>
-                        <div class="slide">
-                            <div class="slide-img">
-                                <img src="./img/coffee-2.jpg" alt="Classic Cappuccino">
-                            </div>
-                            <h3>Classic Cappuccino</h3>
-                            <p>Rich foam & bold flavor</p>
-                        </div>
-                        <div class="slide">
-                            <div class="slide-img">
-                                <img src="./img/coffee-3.jpg" alt="Iced Cold Brew">
-                            </div>
-                            <h3>Iced Cold Brew</h3>
-                            <p>Refreshing smooth coffee</p>
-                        </div>
-                    </div>
-                    <button class="slider-btn" aria-label="Next slide">›</button>
+    
+      <section id="favorites" class="slider-section">
+        <div class="container">
+            <h2>Choose Your Favorite Drink</h2>
+        
+            <div class="slider-container">
+                <button id="prev-btn" class="slider-btn" aria-label="Previous slide">‹</button>
+            
+                <div class="slider-wrapper">
+                <div class="slide active">
+                    <img src="./img/coffee-1.jpg" alt="Caramel Macchiato">
+                    <h3>Caramel Macchiato</h3>
+                    <p>Sweet vanilla & espresso</p>
+                </div>
+                <div class="slide">
+                    <img src="./img/coffee-2.jpg" alt="Classic Cappuccino">
+                    <h3>Classic Cappuccino</h3>
+                    <p>Rich foam & bold flavor</p>
+                </div>
+                <div class="slide">
+                    <img src="./img/coffee-3.jpg" alt="Iced Cold Brew">
+                    <h3>Iced Cold Brew</h3>
+                    <p>Refreshing smooth coffee</p>
                 </div>
             </div>
-        </section>
+                <button id="next-btn" class="slider-btn" aria-label="Previous slide">›</button> 
+            </div>
+            <div class="slider-controls">
+                <div id="slider-pagination" class="slider-pagination">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
 
        <!-- 3. About Section -->
         <section id="about" class="about">
