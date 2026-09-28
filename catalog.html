@@ -9,12 +9,12 @@
 </head>
 <body>
 
-  <!-- ШАПКА САЙТА -->
+  <!-- Header -->
   <header class="header">
     <div class="container header__container">
         <a href="index.html" class="logo">☕ Coffee House</a>
 
-        <!-- Навигация -->
+        <!-- Navigation -->
         <nav class="nav" id="navMenu">
             <ul class="nav-list">
                 <li class="nav-item"><a href="index.html#favorites" class="nav-link">Coffee</a></li>
@@ -24,7 +24,7 @@
             </ul>
         </nav>
 
-        <!-- Кнопки управления (Тема + Бургер) -->
+        <!-- Burger -->
         <div class="header-controls">
             <button id="theme-btn" aria-label="Toggle theme">🌙</button>
             <button class="burger-btn" aria-label="Open menu">☰Menu</button>
@@ -35,120 +35,27 @@
     </div>
   </header>
 
-  <!-- ОСНОВНОЙ КОНТЕНТ -->
+  <!-- Main -->
   <main class="main">
     <section class="catalog">
       <div class="container">
         <h1 class="catalog-title">Behind each of our cups hides an amazing surprise</h1>
 
-        <!-- Категории (Coffee, Tea, Dessert) -->
+        <!-- Category -->
 
-           <div class="categories">
-                <button class="cat-btn active">Coffee</button>
-                <button class="cat-btn">Tea</button>
-                <button class="cat-btn">Desserts</button>
+           <div class="categories" id="categories-container">
+                <button class="cat-btn active" data-category="coffee">☕ Coffee</button>
+                <button class="cat-btn" data-category="tea">🍵 Tea</button>
+                <button class="cat-btn" data-category="dessert">🍰 Desserts</button>
             </div>
 
         <!-- Сетка карточек -->
-        <div class="cards-grid">
-            
-            <!-- Карточка 1 -->
-            <article class="card">
-                <a href="#" class="card__link">
-                    <img src="./img/coffee-1.jpg" alt="Espresso" class="card__img">
-                </a>
-                <div class="card__content">
-                    <h2 class="card__title">Espresso</h2>
-                    <p class="card__desc">Single single shot of pure roasted coffee...</p>
-                    <span class="card__price">$5.00</span>
+            <div class="cards-grid" id="cards-grid">
+            </div>
+                <div>
+                    <button id="load-more-btn" class="load-more-btn">Load More</button>
                 </div>
-            </article>
-
-            <!-- Карточка 2 -->
-            <article class="card">
-                <a href="#" class="card__link">
-                    <img src="./img/coffee-2.jpg" alt="Capuchino" class="card__img">
-                </a>
-                <div class="card__content">
-                    <h2 class="card__title">Capuchino</h2>
-                    <p class="card__desc">Rich espresso with steamed milk and foam...</p>
-                    <span class="card__price">$6.00</span>
-                </div>
-            </article>
-
-            <!-- Карточка 3 -->
-            <article class="card">
-                <a href="#" class="card__link">
-                    <img src="./img/coffee-3.jpg" alt="Latte" class="card__img">
-                </a>
-                <div class="card__content">
-                    <h2 class="card__title">Honey Raft Latte</h2>
-                    <p class="card__desc">Sweet honey combined with delicate latte...</p>
-                    <span class="card__price">$6.50</span>
-                </div>
-            </article>
-
-            <!-- Карточка 4 -->
-            <article class="card">
-                <a href="#" class="card__link">
-                    <img src="./img/coffee-4.jpg" alt="Raft Latte" class="card__img">
-                </a>
-                <div class="card__content">
-                    <h2 class="card__title">Honey Raft Latte</h2>
-                    <p class="card__desc">Sweet honey combined with delicate latte...</p>
-                    <span class="card__price">$6.50</span>
-                </div>
-            </article>
-
-             <!-- Карточка 5 -->
-            <article class="card">
-                <a href="#" class="card__link">
-                    <img src="./img/coffee-5.jpg" alt="Raft Latte" class="card__img">
-                </a>
-                <div class="card__content">
-                    <h2 class="card__title">Honey Raft Latte</h2>
-                    <p class="card__desc">Sweet honey combined with delicate latte...</p>
-                    <span class="card__price">$6.50</span>
-                </div>
-            </article>
-
-             <!-- Карточка 6 -->
-            <article class="card">
-                <a href="#" class="card__link">
-                    <img src="./img/coffee-6.jpg" alt="Latte" class="card__img">
-                </a>
-                <div class="card__content">
-                    <h2 class="card__title">Honey Raft Latte</h2>
-                    <p class="card__desc">Sweet honey combined with delicate latte...</p>
-                    <span class="card__price">$6.50</span>
-                </div>
-            </article>
-
-             <!-- Карточка 7 -->
-            <article class="card">
-                <a href="#" class="card__link">
-                    <img src="./img/coffee-7.jpg" alt="Latte" class="card__img">
-                </a>
-                <div class="card__content">
-                    <h2 class="card__title">Honey Raft Latte</h2>
-                    <p class="card__desc">Sweet honey combined with delicate latte...</p>
-                    <span class="card__price">$6.50</span>
-                </div>
-            </article>
-
-             <!-- Карточка 8 -->
-            <article class="card">
-                <a href="#" class="card__link">
-                    <img src="./img/coffee-8.jpg" alt="Latte" class="card__img">
-                </a>
-                <div class="card__content">
-                    <h2 class="card__title">Honey Raft Latte</h2>
-                    <p class="card__desc">Sweet honey combined with delicate latte...</p>
-                    <span class="card__price">$6.50</span>
-                </div>
-            </article>
-        </div>
-      </div>
+            </div>
     </section>
   </main>
 
@@ -163,5 +70,6 @@
         </div>
     </footer>
   <script src="script.js"></script>
+  <script src="products.json"></script>
 </body>
 </html>

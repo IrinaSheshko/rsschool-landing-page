@@ -81,6 +81,17 @@ img {
     border-radius: 30px; 
 }
 
+.load-more-btn {
+  display: block;
+  margin: 40px auto 0;
+  padding: 10px 10px;
+  cursor: pointer;
+  border-radius: 10%;
+  border: none;
+  background-color: #5f5958;
+  color: #CCD5AE;
+}
+
 /* Шапка */
 .header {
     background-color: var(--header-bg);
