@@ -9,24 +9,31 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <a href="index.html" class="logo">☕ COFFEE HOUSE</a>
-            <nav class="nav">
-                <ul class="nav-list">
-                    <li><a href="#favorites">Coffee</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#visitus">Favorites</a></li>
-                    <li><a href="#contacts">Contacts</a></li>
-                </ul>
-            </nav>
-            <div class="header-controls">
-                <button id="theme-btn" aria-label="Toggle theme">🌙</button>
-                <a href="catalog.html" class="burger-btn" aria-label="Open menu">☰Menu</a>
-            </div>
+<!-- Header -->
+  <header class="header">
+    <div class="container header__container">
+        <a href="index.html" class="logo">☕ Coffee House</a>
+
+        <!-- Navigation -->
+        <nav class="nav" id="navMenu">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="index.html#favorites" class="nav-link">Coffee</a></li>
+                <li class="nav-item"><a href="index.html#about" class="nav-link active">About Us</a></li>
+                <li class="nav-item"><a href="index.html#visitus" class="nav-link">Favorites</a></li>
+                <li class="nav-item"><a href="#contacts" class="nav-link">Contacts</a></li>
+            </ul>
+        </nav>
+
+        <!-- Controls -->
+        <div class="header-controls">
+            <button id="theme-btn" aria-label="Toggle theme">🌙</button>
+            <button id="burger-btn" class="burger-btn" aria-label="Open menu">
+                <span class="burger-btn__line"></span>
+                <span class="burger-btn__line"></span>
+            </button>
         </div>
-    </header>
+    </div>
+  </header>
 
     <!-- Main Content -->
     <main>
