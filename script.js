@@ -23,18 +23,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /* Cards start*/
 
-const cardsGrid = document.getElementById('cards-grid'); 
+const cardsGrid = document.getElementById('cards-grid');
+const loadMoreBtn = document.getElementById('load-more-btn');
+let visibleCardsCount = 4;
 
 async function loadCards(currentCategory = 'coffee') {
     const responce = await fetch('./products.json');
     const products = await responce.json();
 
-    cardsGrid.innerHTML = ' ';
+    cardsGrid.innerHTML = ' '; 
 
-    products
-    .filter((product) => product.category === currentCategory)
-    .slice(0, 4)
-    .forEach((product) => {
+   // Filter 
+    const filteredProducts = products.filter((product) => product.category === currentCategory);
+    if (visibleCardsCount >= filteredProducts.length) {
+        loadMoreBtn.style.display = 'none';
+    } else {
+        loadMoreBtn.style.display = 'block';
+    }
+        
+    filteredProducts.slice(0, visibleCardsCount).forEach((product) => {
         const card = document.createElement('article');
         card.classList.add('card');
 
@@ -48,13 +55,14 @@ async function loadCards(currentCategory = 'coffee') {
                 <span class="card__price">$${product.price}</span>
             </div>
         `;
-
+       
         cardsGrid.appendChild(card);
     })
 }
 loadCards();
 
 /* Cards end*/
+
 
 /* Categories start (const for the buttom)*/
 
@@ -77,3 +85,20 @@ loadCards();
     })
 
 /* Categories end*/
+
+
+/* LoadMore start*/
+
+    loadMoreBtn.addEventListener('click', () => {
+        console.log(visibleCardsCount + 4);
+
+        visibleCardsCount += 4;
+
+        /* search active button*/
+        const activeCategoryBtn = document.querySelector('.cat-btn.active');
+        const currentCategory = activeCategoryBtn ? activeCategoryBtn.dataset.category : 'coffee';
+
+        loadCards(currentCategory);
+    });
+
+/* LoadMore end*/
