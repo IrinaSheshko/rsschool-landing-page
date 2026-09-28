@@ -9,8 +9,7 @@
 </head>
 <body>
 
-  <!-- Header -->
-  <header class="header">
+   <header class="header">
     <div class="container header__container">
         <a href="index.html" class="logo">☕ Coffee House</a>
 
@@ -22,18 +21,28 @@
                 <li class="nav-item"><a href="index.html#visitus" class="nav-link">Favorites</a></li>
                 <li class="nav-item"><a href="#contacts" class="nav-link">Contacts</a></li>
             </ul>
-        </nav>
+        </nav>   
 
-        <!-- Controls -->
+        <!-- Right Controls -->
         <div class="header-controls">
-            <button id="theme-btn" aria-label="Toggle theme">🌙</button>
+            <!-- Theme Button -->
+            <button id="theme-btn" class="theme-btn" aria-label="Toggle theme">🌙</button>
+
+            <!-- Burger Button -->
             <button id="burger-btn" class="burger-btn" aria-label="Open menu">
                 <span class="burger-btn__line"></span>
                 <span class="burger-btn__line"></span>
             </button>
+             <!-- Ссылка Menu -->
+            <a href="catalog.html" class="nav-menu-link desktop-only-link">
+                <span>Menu</span>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 14L14 6M14 6H7M14 6V13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
         </div>
     </div>
-  </header>
+</header>
 
   <!-- Main -->
   <main class="main">
@@ -69,7 +78,51 @@
             <p>&copy; 2026 Coffee House. All rights reserved.</p>
         </div>
     </footer>
+
+<div id="modal" class="modal">
+    <div class="modal__overlay" id="modal-overlay"></div>
+    <div class="modal__content">
+        <button class="modal__close" id="modal-close" aria-label="Close modal">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 4L4 12M4 4L12 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+        
+        <div class="modal__image-wrapper">
+            <img id="modal-img" src="" alt="Product image" class="modal__img">
+        </div>
+        
+        <div class="modal__details">
+            <h3 id="modal-title" class="modal__title"></h3>
+            <p id="modal-desc" class="modal__desc"></p>
+            
+            <div class="modal__option-group">
+                <span class="modal__option-title">Size</span>
+                <div class="modal__options" id="modal-sizes"></div>
+            </div>
+
+            <div class="modal__option-group">
+                <span class="modal__option-title">Additives</span>
+                <div class="modal__options" id="modal-additives"></div>
+            </div>
+
+            <div class="modal__total">
+                <span class="modal__total-title">Total:</span>
+                <span id="modal-total-price" class="modal__price">$0.00</span>
+            </div>
+
+            <p class="modal__info">
+                <span>ⓘ</span> The cost is not final. Price depends on the selected ingredients.
+            </p>
+        </div>
+    </div>
+</div>
+
+
   <script src="script.js"></script>
   <script src="products.json"></script>
+
+  
+
 </body>
 </html>
