@@ -9,12 +9,11 @@
 </head>
 <body>
 
-  <!-- ШАПКА САЙТА -->
-  <header class="header">
+   <header class="header">
     <div class="container header__container">
         <a href="index.html" class="logo">☕ Coffee House</a>
 
-        <!-- Навигация -->
+        <!-- Navigation -->
         <nav class="nav" id="navMenu">
             <ul class="nav-list">
                 <li class="nav-item"><a href="index.html#favorites" class="nav-link">Coffee</a></li>
@@ -22,133 +21,50 @@
                 <li class="nav-item"><a href="index.html#visitus" class="nav-link">Favorites</a></li>
                 <li class="nav-item"><a href="#contacts" class="nav-link">Contacts</a></li>
             </ul>
-        </nav>
+        </nav>   
 
-        <!-- Кнопки управления (Тема + Бургер) -->
+        <!-- Right Controls -->
         <div class="header-controls">
-            <button id="theme-btn" aria-label="Toggle theme">🌙</button>
-            <button class="burger-btn" aria-label="Open menu">☰Menu</button>
-                <span></span>
-                <span></span>
-                <span></span>
+            <!-- Theme Button -->
+            <button id="theme-btn" class="theme-btn" aria-label="Toggle theme">🌙</button>
+
+            <!-- Burger Button -->
+            <button id="burger-btn" class="burger-btn" aria-label="Open menu">
+                <span class="burger-btn__line"></span>
+                <span class="burger-btn__line"></span>
+            </button>
+             <!-- Ссылка Menu -->
+            <a href="catalog.html" class="nav-menu-link desktop-only-link">
+                <span>Menu</span>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 14L14 6M14 6H7M14 6V13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
         </div>
     </div>
-  </header>
+</header>
 
-  <!-- ОСНОВНОЙ КОНТЕНТ -->
+  <!-- Main -->
   <main class="main">
     <section class="catalog">
       <div class="container">
         <h1 class="catalog-title">Behind each of our cups hides an amazing surprise</h1>
 
-        <!-- Категории (Coffee, Tea, Dessert) -->
+        <!-- Category -->
 
-           <div class="categories">
-                <button class="cat-btn active">Coffee</button>
-                <button class="cat-btn">Tea</button>
-                <button class="cat-btn">Desserts</button>
+           <div class="categories" id="categories-container">
+                <button class="cat-btn active" data-category="coffee">☕ Coffee</button>
+                <button class="cat-btn" data-category="tea">🍵 Tea</button>
+                <button class="cat-btn" data-category="dessert">🍰 Desserts</button>
             </div>
 
         <!-- Сетка карточек -->
-        <div class="cards-grid">
-            
-            <!-- Карточка 1 -->
-            <article class="card">
-                <a href="#" class="card__link">
-                    <img src="./img/coffee-1.jpg" alt="Espresso" class="card__img">
-                </a>
-                <div class="card__content">
-                    <h2 class="card__title">Espresso</h2>
-                    <p class="card__desc">Single single shot of pure roasted coffee...</p>
-                    <span class="card__price">$5.00</span>
+            <div class="cards-grid" id="cards-grid">
+            </div>
+                <div>
+                    <button id="load-more-btn" class="load-more-btn">Load More</button>
                 </div>
-            </article>
-
-            <!-- Карточка 2 -->
-            <article class="card">
-                <a href="#" class="card__link">
-                    <img src="./img/coffee-2.jpg" alt="Capuchino" class="card__img">
-                </a>
-                <div class="card__content">
-                    <h2 class="card__title">Capuchino</h2>
-                    <p class="card__desc">Rich espresso with steamed milk and foam...</p>
-                    <span class="card__price">$6.00</span>
-                </div>
-            </article>
-
-            <!-- Карточка 3 -->
-            <article class="card">
-                <a href="#" class="card__link">
-                    <img src="./img/coffee-3.jpg" alt="Latte" class="card__img">
-                </a>
-                <div class="card__content">
-                    <h2 class="card__title">Honey Raft Latte</h2>
-                    <p class="card__desc">Sweet honey combined with delicate latte...</p>
-                    <span class="card__price">$6.50</span>
-                </div>
-            </article>
-
-            <!-- Карточка 4 -->
-            <article class="card">
-                <a href="#" class="card__link">
-                    <img src="./img/coffee-4.jpg" alt="Raft Latte" class="card__img">
-                </a>
-                <div class="card__content">
-                    <h2 class="card__title">Honey Raft Latte</h2>
-                    <p class="card__desc">Sweet honey combined with delicate latte...</p>
-                    <span class="card__price">$6.50</span>
-                </div>
-            </article>
-
-             <!-- Карточка 5 -->
-            <article class="card">
-                <a href="#" class="card__link">
-                    <img src="./img/coffee-5.jpg" alt="Raft Latte" class="card__img">
-                </a>
-                <div class="card__content">
-                    <h2 class="card__title">Honey Raft Latte</h2>
-                    <p class="card__desc">Sweet honey combined with delicate latte...</p>
-                    <span class="card__price">$6.50</span>
-                </div>
-            </article>
-
-             <!-- Карточка 6 -->
-            <article class="card">
-                <a href="#" class="card__link">
-                    <img src="./img/coffee-6.jpg" alt="Latte" class="card__img">
-                </a>
-                <div class="card__content">
-                    <h2 class="card__title">Honey Raft Latte</h2>
-                    <p class="card__desc">Sweet honey combined with delicate latte...</p>
-                    <span class="card__price">$6.50</span>
-                </div>
-            </article>
-
-             <!-- Карточка 7 -->
-            <article class="card">
-                <a href="#" class="card__link">
-                    <img src="./img/coffee-7.jpg" alt="Latte" class="card__img">
-                </a>
-                <div class="card__content">
-                    <h2 class="card__title">Honey Raft Latte</h2>
-                    <p class="card__desc">Sweet honey combined with delicate latte...</p>
-                    <span class="card__price">$6.50</span>
-                </div>
-            </article>
-
-             <!-- Карточка 8 -->
-            <article class="card">
-                <a href="#" class="card__link">
-                    <img src="./img/coffee-8.jpg" alt="Latte" class="card__img">
-                </a>
-                <div class="card__content">
-                    <h2 class="card__title">Honey Raft Latte</h2>
-                    <p class="card__desc">Sweet honey combined with delicate latte...</p>
-                    <span class="card__price">$6.50</span>
-                </div>
-            </article>
-        </div>
-      </div>
+            </div>
     </section>
   </main>
 
@@ -162,6 +78,51 @@
             <p>&copy; 2026 Coffee House. All rights reserved.</p>
         </div>
     </footer>
+
+<div id="modal" class="modal">
+    <div class="modal__overlay" id="modal-overlay"></div>
+    <div class="modal__content">
+        <button class="modal__close" id="modal-close" aria-label="Close modal">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 4L4 12M4 4L12 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+        
+        <div class="modal__image-wrapper">
+            <img id="modal-img" src="" alt="Product image" class="modal__img">
+        </div>
+        
+        <div class="modal__details">
+            <h3 id="modal-title" class="modal__title"></h3>
+            <p id="modal-desc" class="modal__desc"></p>
+            
+            <div class="modal__option-group">
+                <span class="modal__option-title">Size</span>
+                <div class="modal__options" id="modal-sizes"></div>
+            </div>
+
+            <div class="modal__option-group">
+                <span class="modal__option-title">Additives</span>
+                <div class="modal__options" id="modal-additives"></div>
+            </div>
+
+            <div class="modal__total">
+                <span class="modal__total-title">Total:</span>
+                <span id="modal-total-price" class="modal__price">$0.00</span>
+            </div>
+
+            <p class="modal__info">
+                <span>ⓘ</span> The cost is not final. Price depends on the selected ingredients.
+            </p>
+        </div>
+    </div>
+</div>
+
+
   <script src="script.js"></script>
+  <script src="products.json"></script>
+
+  
+
 </body>
 </html>

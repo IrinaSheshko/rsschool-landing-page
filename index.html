@@ -3,29 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./img/icons/hot-coffee-icons.png" rel="icon" type="image/svg">
     <title>Coffee House — Artisan Coffee & Cozy Atmosphere</title>
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <a href="index.html" class="logo">☕ COFFEE HOUSE</a>
-            <nav class="nav">
-                <ul class="nav-list">
-                    <li><a href="#favorites">Coffee</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#visitus">Favorites</a></li>
-                    <li><a href="#contacts">Contacts</a></li>
-                </ul>
-            </nav>
-            <div class="header-controls">
-                <button id="theme-btn" aria-label="Toggle theme">🌙</button>
-                <a href="catalog.html" class="burger-btn" aria-label="Open menu">☰Menu</a>
-            </div>
+<!-- Header -->
+  <header class="header">
+    <div class="container header__container">
+        <a href="index.html" class="logo">☕ Coffee House</a>
+
+        <!-- Navigation -->
+        <nav class="nav" id="navMenu">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="index.html#favorites" class="nav-link">Coffee</a></li>
+                <li class="nav-item"><a href="index.html#about" class="nav-link active">About Us</a></li>
+                <li class="nav-item"><a href="index.html#visitus" class="nav-link">Favorites</a></li>
+                <li class="nav-item"><a href="#contacts" class="nav-link">Contacts</a></li>
+            </ul>
+        </nav>   
+
+        <!-- Right Controls -->
+        <div class="header-controls">
+            <!-- Theme Button -->
+            <button id="theme-btn" class="theme-btn" aria-label="Toggle theme">🌙</button>
+
+            <!-- Burger Button -->
+            <button id="burger-btn" class="burger-btn" aria-label="Open menu">
+                <span class="burger-btn__line"></span>
+                <span class="burger-btn__line"></span>
+            </button>
+             <!-- Ссылка Menu -->
+            <a href="catalog.html" class="nav-menu-link desktop-only-link">
+                <span>Menu</span>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 14L14 6M14 6H7M14 6V13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
         </div>
-    </header>
+    </div>
+</header>
 
     <!-- Main Content -->
     <main>
@@ -39,38 +57,43 @@
         </section>
 
         <!-- 2. Slider Section -->
-        <section id="favorites" class="slider-section">
-            <div class="container">
-                <h2>Choose Your Favorite Drink</h2>
-                <div class="slider-container">
-                    <button class="slider-btn" aria-label="Previous slide">‹</button>
-                    <div class="slider-track">
-                        <div class="slide">
-                            <div class="slide-img">
-                                <img src="./img/coffee-1.jpg" alt="Caramel Macchiato">
-                            </div>
-                            <h3>Caramel Macchiato</h3>
-                            <p>Sweet vanilla & espresso</p>
-                        </div>
-                        <div class="slide">
-                            <div class="slide-img">
-                                <img src="./img/coffee-2.jpg" alt="Classic Cappuccino">
-                            </div>
-                            <h3>Classic Cappuccino</h3>
-                            <p>Rich foam & bold flavor</p>
-                        </div>
-                        <div class="slide">
-                            <div class="slide-img">
-                                <img src="./img/coffee-3.jpg" alt="Iced Cold Brew">
-                            </div>
-                            <h3>Iced Cold Brew</h3>
-                            <p>Refreshing smooth coffee</p>
-                        </div>
-                    </div>
-                    <button class="slider-btn" aria-label="Next slide">›</button>
+    
+      <section id="favorites" class="slider-section">
+        <div class="container">
+            <h2>Choose Your Favorite Drink</h2>
+        
+            <div class="slider-container">
+                <button id="prev-btn" class="slider-btn" aria-label="Previous slide">‹</button>
+            
+                <div class="slider-wrapper">
+                <div class="slide active">
+                    <img src="./img/coffee-1.jpg" alt="Caramel Macchiato">
+                    <h3>Caramel Macchiato</h3>
+                    <p>Sweet vanilla & espresso</p>
+                </div>
+                <div class="slide">
+                    <img src="./img/coffee-2.jpg" alt="Classic Cappuccino">
+                    <h3>Classic Cappuccino</h3>
+                    <p>Rich foam & bold flavor</p>
+                </div>
+                <div class="slide">
+                    <img src="./img/coffee-3.jpg" alt="Iced Cold Brew">
+                    <h3>Iced Cold Brew</h3>
+                    <p>Refreshing smooth coffee</p>
                 </div>
             </div>
-        </section>
+                <button id="next-btn" class="slider-btn" aria-label="Previous slide">›</button> 
+            </div>
+            <div class="slider-controls">
+                <div id="slider-pagination" class="slider-pagination">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
 
        <!-- 3. About Section -->
         <section id="about" class="about">
@@ -130,5 +153,6 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="products.json"></script>
 </body>
 </html>
