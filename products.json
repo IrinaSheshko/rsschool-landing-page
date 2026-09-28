@@ -292,7 +292,7 @@
     "description": "Fragrant black tea with the addition of tangerine, cinnamon, honey, lemon and mint",
     "price": "4.50",
     "category": "tea",
-    "image": "./img/tea/tea-1.png",
+    "image": "./img/Tea/tea-1.png",
     "sizes": {
       "s": {
         "size": "200 ml",
@@ -328,7 +328,7 @@
     "description": "Original black tea with fresh ginger, lemon and honey",
     "price": "5.00",
     "category": "tea",
-    "image": "./img/tea/tea-2.png",
+    "image": "./img/Tea/tea-2.png",
     "sizes": {
       "s": {
         "size": "200 ml",
@@ -364,7 +364,7 @@
     "description": "Invigorating black tea with cranberry and honey",
     "price": "5.00",
     "category": "tea",
-    "image": "./img/tea/tea-3.png",
+    "image": "./img/Tea/tea-3.png",
     "sizes": {
       "s": {
         "size": "200 ml",
@@ -400,7 +400,7 @@
     "description": "Toning sweet black tea with sea buckthorn, fresh thyme and cinnamon",
     "price": "5.50",
     "category": "tea",
-    "image": "./img/tea/tea-4.png",
+    "image": "./img/Tea/tea-4.png",
     "sizes": {
       "s": {
         "size": "200 ml",
